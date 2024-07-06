@@ -1,0 +1,21 @@
+table{
+    width: 80%;
+    min-width: 650px;
+    max-width: 800px;    
+    margin: 20px;
+    /* border: 1px solid black; */
+    border-collapse: separate;
+    background: rgb(1, 109, 104);
+    
+}
+thead th{
+    text-align: center;
+    padding: 0.5em
+}
+
+td, th{
+    border: 2px dotted black;
+    color: white;
+    text-align: left;
+    padding: 0.5em
+}
