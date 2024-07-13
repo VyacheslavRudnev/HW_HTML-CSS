@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        .circle {
+            width: 400px;
+            height: 400px;
+            border: 2px solid rgb(0, 217, 255);
+            background: none;
+            margin-top: 50px;
+            margin-left: 50px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .top12,
+        .right3,
+        .bottom6,
+        .left9 {
+            position: absolute;
+            width: 4px;
+            height: 20px;
+            background-color: rgb(0, 217, 255);
+        }
+
+        .top12 {
+            background: rgb(0, 217, 255);
+            top: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        .right3 {
+            top: 50%;
+            right: 3%;
+            transform: translateY(-50%) rotate(90deg);
+            transform-origin: center;
+        }
+
+        .bottom6 {
+            bottom: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .left9 {
+            top: 50%;
+            left: 3%;
+            transform: translateY(-50%) rotate(90deg);
+            transform-origin: center;
+        }
+
+        .arrowS {
+            width: 2px;
+            height: 170px;
+            background: rgb(0, 217, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            transform: translate(-50%, -100%) rotate(0);
+            animation: rotate 60s steps(60) infinite;
+        }
+
+        .arrowM {
+            width: 4px;
+            height: 150px;
+            background: rgb(0, 217, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            transform: translate(-50%, -100%) rotate(0);
+            animation: rotate 3600s steps(60) infinite;
+        }
+
+        .arrowH {
+            width: 5px;
+            height: 100px;
+            background: rgb(0, 217, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            transform: translate(-50%, -100%) rotate(0);
+            animation: rotate 216000s steps(60) infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%, -100%) rotate(0);
+            }
+
+            100% {
+                transform: translate(-50%, -100%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="top12"></div>
+        <div class="right3"></div>
+        <div class="bottom6"></div>
+        <div class="left9"></div>
+        <div class="arrowS"></div>
+        <div class="arrowM"></div>
+        <div class="arrowH"></div>
+
+    </div>
+
+</body>
+
+</html>
