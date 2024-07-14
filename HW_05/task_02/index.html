@@ -17,17 +17,29 @@
             position: relative;
         }
 
-        .top12,
-        .right3,
-        .bottom6,
-        .left9 {
+        .m7, .m8, .m10, .m11 {
+            position: absolute;
+            color: rgb(0, 217, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .m12,
+        .m1,
+        .m2,
+        .m3,
+        .m4,
+        .m5,
+        .m6,
+        .m9 {
             position: absolute;
             width: 4px;
             height: 20px;
             background-color: rgb(0, 217, 255);
         }
 
-        .top12 {
+        .m12 {
             background: rgb(0, 217, 255);
             top: 1%;
             left: 50%;
@@ -35,23 +47,79 @@
 
         }
 
-        .right3 {
+        .m1 {
+            top: 10%;
+            left: 73%;
+            transform: translateY(-50%) rotate(30deg);
+            transform-origin: center;
+        }
+
+        .m2 {
+            top: 27%;
+            left: 90%;
+            transform: translateY(-50%) rotate(60deg);
+            transform-origin: center;
+        }
+
+        .m3 {
             top: 50%;
             right: 3%;
             transform: translateY(-50%) rotate(90deg);
             transform-origin: center;
         }
 
-        .bottom6 {
+        .m4 {
+            top: 73%;
+            left: 90%;
+            transform: translateY(-50%) rotate(120deg);
+            transform-origin: center;
+        }
+
+        .m5 {
+            top: 90%;
+            left: 73%;
+            transform: translateY(-50%) rotate(150deg);
+            transform-origin: center;
+        }
+
+        .m6 {
             bottom: 1%;
             left: 50%;
             transform: translateX(-50%);
         }
 
-        .left9 {
+        .m7 {
+            top: 90%;
+            left: 27%;
+            transform: translateY(-50%);
+            transform-origin: center;
+        }
+
+        .m8 {
+            top: 73%;
+            left: 9%;
+            transform: translateY(-50%);
+            transform-origin: center;
+        }
+
+        .m9 {
             top: 50%;
             left: 3%;
             transform: translateY(-50%) rotate(90deg);
+            transform-origin: center;
+        }
+
+        .m10 {
+            top: 28%;
+            left: 7%;
+            transform: translateY(-50%);
+            transform-origin: center;
+        }
+
+        .m11 {
+            top: 12%;
+            left: 21%;
+            transform: translateY(-50%);
             transform-origin: center;
         }
 
@@ -88,7 +156,7 @@
             left: 50%;
             transform-origin: bottom;
             transform: translate(-50%, -100%) rotate(0);
-            animation: rotate 216000s steps(60) infinite;
+            animation: rotate 43200s linear infinite;
         }
 
         @keyframes rotate {
@@ -105,10 +173,18 @@
 
 <body>
     <div class="circle">
-        <div class="top12"></div>
-        <div class="right3"></div>
-        <div class="bottom6"></div>
-        <div class="left9"></div>
+        <div class="m12"></div>
+        <div class="m1"></div>
+        <div class="m2"></div>
+        <div class="m3"></div>
+        <div class="m4"></div>
+        <div class="m5"></div>
+        <div class="m6"></div>
+        <div class="m7">7</div>
+        <div class="m8">8</div>
+        <div class="m9"></div>
+        <div class="m10">10</div>
+        <div class="m11">11</div>
         <div class="arrowS"></div>
         <div class="arrowM"></div>
         <div class="arrowH"></div>
