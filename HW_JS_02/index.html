@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW_JS_02</title>
+</head>
+<body>
+    <h1>HW_JS_02</h1>
+    
+    <div>
+        <h2>Конвертор</h2>
+        <label for="lengthInput">Введіть відстань:</label><br>
+        <input type="text" id="lengthInput" placeholder="километри"><br>
+        <button id="convertBtn">Конвертувати</button><br>
+        <span id="convertResult"></span>
+    </div>
+
+    <div>
+        <h2>Калькулятор</h2>
+        <label>Введіть два числа:</label><br>
+        <input type="text" id="firstNumberInput" placeholder="перше число"><br>
+        <input type="text" id="secondNumberInput" placeholder="друге число"><br>
+        <label>Оберіть дію:</label><br>
+        <div class="operations">
+            <button class="operation" id="multiply">×</button>
+            <button class="operation" id="divide">÷</button>
+            <button class="operation" id="add">+</button>
+            <button class="operation" id="subtract">-</button>
+            <button class="operation" id="clear">Очистити</button>
+        </div>
+        <span id="calculateResult"></span>        
+    </div>
+
+    <div>
+        <h2>Визначення віку</h2>
+        <label for="ageInput">Вкажіть Ваш вік:</label><br>
+        <input type="text" id="ageInput" placeholder="роки"><br><br>
+        <button id="calculateAgeBtn">Розрахувати</button><br>
+        <span id="ageResult"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
