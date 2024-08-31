@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_JS_03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="basis">
+        <div class="container">
+            <div class="mainItem">
+                <h1 id="innerH1"></h1>
+                <div>
+                    <p id="innerKeyCod"></p>
+                    <h2>Key Code Information</h2>
+                </div>
+            </div>
+            <div class="subitems">
+                <div class="cardContainer">
+                    <div class="cardTitle">
+                        <h3 class="titleText">event.key</h3>
+                    </div>
+                    <div class="cardContent">
+                        <p id="innerKey"></p>
+                    </div>
+                    <div class="cardDescription">
+                        <div class="textDescription">
+                            The value of the key pressed. Accounts for modifiers keys that return CAPS and alternate chars.
+                        </div>
+                    </div>
+                </div>
+                <div class="cardContainer">
+                    <div class="cardTitle">
+                        <h3 class="titleText">event.location</h3>
+                    </div>
+                    <div class="cardContent">
+                        <p id="innerLocation">
+
+                        </p>
+                    </div>
+                    <div class="cardDescription">
+                        <div class="textDescription">
+                            Some keys exist more than once on your keyboard. This provides the location of the key pressed. Try it with both shifts.
+                        </div>
+                    </div>
+                </div>
+                <div class="cardContainer">
+                    <div class="cardTitle">
+                        <h3 class="titleText">event.code</h3>
+                    </div>
+                    <div class="cardContent">
+                        <p id="innerCode">
+
+                        </p>
+                    </div>
+                    <div class="cardDescription">
+                        <div class="textDescription">
+                            The physical key on the keyboard. Doesn't care if you are holding a modifier like Shift.
+                        </div>
+                    </div>
+                </div>
+                <div class="cardContainer">
+                    <div class="cardTitle">
+                        <h3 class="titleText">event.which</h3>
+                    </div>
+                    <div class="cardContent">
+                        <p id="innerWhich">
+
+                        </p>
+                    </div>
+                    <div class="cardDescription">
+                        <div class="textDescription">
+                            event.which and event.keyCode are deprecated in modern browsers. Use .key or .code instead.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="clickableDiv"></div>
+    <script>
+        let innerH1 = document.getElementById('innerH1')
+        let innerKeyCod = document.getElementById('innerKeyCod')
+        let innerKey = document.getElementById('innerKey')
+        let innerLocation = document.getElementById('innerLocation')
+        let innerCode = document.getElementById('innerCode')
+        let innerWhich = document.getElementById('innerWhich')
+
+        document.addEventListener('keydown', (e) => {
+            innerH1.innerHTML = `Key Code Information ${e.keyCode}`
+            innerKeyCod.innerHTML = `${e.keyCode}`
+            innerKey.innerHTML = `${e.key}`
+            innerLocation.innerHTML = `${e.location}`
+            innerCode.innerHTML = `${e.code}`
+            innerWhich.innerHTML = `${e.which}`
+        })
+    </script>
+</body>
+</html>
