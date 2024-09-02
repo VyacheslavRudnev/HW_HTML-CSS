@@ -1,0 +1,46 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-block {
+    background-color: #444;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.time-block span {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #FFD700;
+}
+
+.time-block::after {
+    content: attr(data-label);
+    font-size: 1rem;
+    color: #bbb
+}
