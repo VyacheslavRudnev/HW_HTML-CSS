@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewWindow</title>
+</head>
+<body>
+<button onclick="openWindow()">open new window</button>
+<button onclick="closeOpenedWindow()">close new window</button>
+<script>
+    let newWin;
+    function openWindow() {
+        newWin=window.open("https://itstep.org", "StepWin", "resizable");
+        newWin.resizeTo(640,480);
+        newWin.moveTo(350,150);
+    }
+    function closeOpenedWindow() {
+        newWin.close()
+    }
+</script>
+</body>
+</html>

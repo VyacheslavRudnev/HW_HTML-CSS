@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation</title>
+</head>
+<body>
+<div>Ваша поточна позиція:</div>
+<div>Широта: <span id="Latitude"></span></div>
+<div>Довгота: <span id="Longitude"></span></div>
+  <script>
+    let Latitude = document.getElementById('Latitude')
+    let Longitude = document.getElementById('Longitude')
+
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0,
+    };
+
+    function success(pos) {
+      const crd = pos.coords;
+      Latitude.innerHTML = crd.latitude
+      Longitude.innerHTML = crd.longitude
+
+      console.log(`Latitude : ${crd.latitude}`);
+      console.log(`Longitude: ${crd.longitude}`);
+    }
+
+    function error(err) {
+      console.warn(`ERROR(${err.code}): ${err.message}`)
+    }
+
+    setInterval(() => {
+      navigator.geolocation.getCurrentPosition(success, error, options);
+    }, 5000);
+  </script>
+</body>
+</html>

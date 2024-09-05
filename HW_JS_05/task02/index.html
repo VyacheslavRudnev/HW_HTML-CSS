@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language</title>
+    <style>
+        #info_div1{
+            font-size: 2em;
+            font-weight: bold;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1 id="langName">Головна системна мова</h1>
+    <div id="info_div1"></div>
+    <br>
+    <h2 id="langSystem">Системні мови</h2>
+    <div id="info_div2"></div>
+    <h2 id="langSystem2">Системні мови іншим способом</h2>
+    <div id="info_div3"></div>
+</div>
+<script>
+    let info_div1 = document.getElementById('info_div1')
+    let info_div2 = document.getElementById('info_div2')
+    let info_div3 = document.getElementById('info_div3')
+    const systemLanguage = navigator.language
+    const systemLanguages = navigator.languages
+    info_div1.innerHTML += systemLanguage
+    info_div2.innerHTML += systemLanguages.join(', ')
+
+    //другий варіант виводу всіх мов
+    systemLanguages.forEach((language, index) => {
+        info_div3.innerHTML += language;
+
+        if (index < systemLanguages.length - 1) {
+            info_div3.innerHTML += ', '
+        }
+    })
+</script>
+</body>
+</html>
