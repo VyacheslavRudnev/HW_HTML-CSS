@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_JS_07</title>
+    <style>
+        .square{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+  <div id="square1" class="square"></div>
+
+  <div id="square2" class="square"></div>
+
+  <div id="square3" class="square"></div>
+
+  <input id="color" type="color">
+
+  <button onclick="setBgColor('square1')">square1</button>
+  <button onclick="setBgColor('square2')">square2</button>
+  <button onclick="setBgColor('square3')">square3</button>
+
+    <script>
+       //Через localStorage
+        let colorInput = document.getElementById('color')
+
+        function setBgColor(squareId) {
+            let color = colorInput.value
+            document.getElementById(squareId).style.backgroundColor = color
+            localStorage.setItem(squareId, color)
+        }
+
+        function loadColors() {
+            let squareIds = ['square1', 'square2', 'square3']
+            squareIds.forEach(squareId => {
+                let color = localStorage.getItem(squareId)
+                if (color) {
+                    document.getElementById(squareId).style.backgroundColor = color
+                }
+            })
+        }
+
+        window.onload = loadColors
+
+       //Через Cookie
+
+       // function setCookie(name, value, min) {//створення cookie
+       //     let expires = ""
+       //
+       //     if (min) {
+       //         const date = new Date()
+       //         date.setTime(date.getTime() + (min * 60 * 1000))
+       //         expires = "; expires=" + date.toUTCString()
+       //     }
+       //     document.cookie = name + "=" + (value || "") + expires + "; path=/"
+       // }
+       //
+       // function getCookie(name) {
+       //     const nameEQ = name + "="
+       //     const allCookies = document.cookie.split(';')
+       //
+       //     for (let i = 0; i < allCookies.length; i++) {
+       //         let cookie = allCookies[i].trim() // Видалення пробілів з рядка
+       //
+       //         if (cookie.indexOf(nameEQ) === 0) {
+       //             return cookie.substring(nameEQ.length, cookie.length)
+       //         }
+       //     }
+       //     return null
+       // }
+       //
+       // function setBgColor(squareId) {
+       //     const color = document.getElementById('color').value
+       //     document.getElementById(squareId).style.backgroundColor = color
+       //     setCookie(squareId, color, 1)
+       // }
+       //
+       // function loadColors() {
+       //     const squareIds = ['square1', 'square2', 'square3']
+       //     squareIds.forEach(squareId => {
+       //         const color = getCookie(squareId)
+       //         if (color) {
+       //             document.getElementById(squareId).style.backgroundColor = color
+       //         }
+       //     })
+       // }
+       //
+       // window.onload = loadColors
+    </script>
+</body>
+</html>
